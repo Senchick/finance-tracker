@@ -1,0 +1,80 @@
+style:
+  MagicNumber:
+    ignoreEnums: true
+    ignoreAnnotation: true
+    ignorePropertyDeclaration: true
+    ignoreCompanionObjectPropertyDeclaration: true
+  WildcardImport:
+    active: false
+  UnusedPrivateMember:
+    ignoreAnnotated:
+      - Preview
+      - PreviewTheme
+  NewLineAtEndOfFile:
+    active: false
+formatting:
+  FinalNewline:
+    active: false
+naming:
+  FunctionNaming:
+    functionPattern: '[a-zA-Z][a-zA-Z0-9]*'
+    ignoreAnnotated:
+      - Composable
+  TopLevelPropertyNaming:
+    constantPattern: '[A-Z][A-Za-z0-9]*'
+complexity:
+  LongMethod:
+    ignoreAnnotated:
+      - Composable
+  LongParameterList:
+    functionThreshold: 100
+    ignoreDefaultParameters: true
+empty-blocks:
+  EmptyFunctionBlock:
+    ignoreOverridden: true
+compose:
+  ReusedModifierInstance:
+    active: true
+  UnnecessaryEventHandlerParameter:
+    active: true
+  ComposableEventParameterNaming:
+    active: true
+  ComposableParametersOrdering:
+    active: true
+  ModifierHeightWithText:
+    active: true
+  ModifierParameterPosition:
+    active: true
+  ModifierDefaultValue:
+    active: true
+  MissingModifierDefaultValue:
+    active: true
+  PublicComposablePreview:
+    active: true
+  TopLevelComposableFunctions:
+    active: true
+  ComposableFunctionName:
+    active: true
+  ConditionCouldBeLifted:
+    active: true
+    ignoreCallsWithArgumentNames: [ 'modifier', 'contentAlignment' ]
+HbmartinRuleSet:
+  AvoidFirstOrLastOnList:
+    active: true
+  AvoidMutableCollections:
+    active: true
+  AvoidVarsExceptWithDelegate:
+    active: true
+    allowedDelegates:
+      - 'remember\w*'
+      - 'mutableState\w*'
+  DontForceCast:
+    active: true
+  MutableTypeShouldBePrivate:
+    active: true
+  NoNotNullOperator:
+    active: true
+  NoVarsInConstructor:
+    active: true
+  WhenBranchSingleLineOrBraces:
+    active: true
