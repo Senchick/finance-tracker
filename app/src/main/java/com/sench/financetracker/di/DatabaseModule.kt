@@ -25,7 +25,9 @@ object DatabaseModule {
             context,
             FinancialActionsDatabase::class.java,
             "financial_actions"
-        ).build()
+        )
+            .fallbackToDestructiveMigration()
+            .build()
     }
 
     @Provides

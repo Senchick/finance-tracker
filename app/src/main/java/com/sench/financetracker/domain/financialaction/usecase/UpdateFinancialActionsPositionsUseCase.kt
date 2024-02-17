@@ -1,13 +1,16 @@
 package com.sench.financetracker.domain.financialaction.usecase
 
-import androidx.paging.PagingData
 import com.sench.financetracker.data.financialaction.FinancialAction
 import com.sench.financetracker.domain.financialaction.repository.FinancialActionsRepository
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
-class GetFinancialActionsUseCase @Inject constructor(
+class UpdateFinancialActionsPositionsUseCase @Inject constructor(
     private val repository: FinancialActionsRepository
 ) {
-    operator fun invoke(): Flow<PagingData<FinancialAction>> = repository.getAll()
+    suspend operator fun invoke(
+        financialActionFrom: FinancialAction,
+        financialActionTo: FinancialAction
+    ) {
+        repository.updateTwoEntities(financialActionFrom, financialActionTo)
+    }
 }

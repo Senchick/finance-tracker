@@ -1,12 +1,13 @@
 package com.sench.financetracker.domain.financialaction.repository
 
-import androidx.paging.PagingData
 import com.sench.financetracker.data.financialaction.FinancialAction
 import kotlinx.coroutines.flow.Flow
 
 interface FinancialActionsRepository {
-    fun getAll(): Flow<PagingData<FinancialAction>>
+    fun getAll(): Flow<List<FinancialAction>>
+    fun sum(): Flow<Double>
     suspend fun create(financialAction: FinancialAction): Long
     suspend fun update(financialAction: FinancialAction): Int
-    suspend fun sum(): Double
+    suspend fun delete(financialAction: FinancialAction)
+    suspend fun updateTwoEntities(first: FinancialAction, second: FinancialAction)
 }

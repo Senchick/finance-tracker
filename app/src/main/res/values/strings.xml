@@ -2,4 +2,13 @@
     <string name="app_name">Finance Tracker</string>
     <string name="common_expense">Expense</string>
     <string name="common_income">Income</string>
+    <string name="title_balance">Balance</string>
+    <string name="title_list_empty">The list is empty :(</string>
+    <string name="title_list_empty_description">Now you do not have a list of income and expenses. Start putting it together right now!</string>
+    <string name="title_add_record">Add record</string>
+    <string name="title_edit_record">Edit record</string>
+    <string name="title_delete_record">Delete record</string>
+    <string name="title_title">Title</string>
+    <string name="title_description">Description</string>
+    <string name="title_amount">Amount</string>
 </resources>
